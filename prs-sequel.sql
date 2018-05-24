@@ -1,6 +1,11 @@
 use master;
-drop database if exists [User];
-create database [User];
+go
+drop database if exists prssql;
+go
+create database prssql;
+go
+use prssql;
+go
 create table [User] (
 	Id int not null identity(1, 1) primary key,
 	Username nvarchar(30) not null unique, 
