@@ -83,7 +83,7 @@ create table PurchaseRequest (
 	DeliveryMode nvarchar(25) not null,
 	Status nvarchar(10) not null default 'NEW',
 	Total decimal(10, 2) not null default 0,
-	Active bit default 1,
+	Active bit default 1 not null,
 	ReasonForRejection nvarchar(100)
 );
 go
