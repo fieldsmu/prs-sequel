@@ -29,12 +29,12 @@ insert [User]
 insert [User]
 	(Username, Password, Firstname, Lastname, Phone, Email, IsReviewer, IsAdmin, Active)
 	Values
-	('rachelfr', 'password', 'rachel', 'freking', '513-720-9421', 'rachelfr@gmail.com', 1, 0, 1);
+	('rachelfr', 'password', 'rachel', 'freking', '513-720-9421', 'frekinra@gmail.com', 1, 0, 1);
 
 insert [User]
 	(Username, Password, Firstname, Lastname, Phone, Email, IsReviewer, IsAdmin, Active)
 	Values
-	('marysadd', 'password', 'mary', 'saddler', '513-254-3769', 'marysadd@gmail.com', 0, 0, 1);
+	('marysadd', 'password', 'mary', 'saddler', '513-254-3769', 'saddlrma@gmail.com', 0, 0, 1);
 go
 create table Vendor (
 	Id int not null identity(1, 1) primary key,
@@ -85,6 +85,14 @@ create table PurchaseRequest (
 	Total decimal(10, 2) not null default 0,
 	Active bit default 1 not null,
 	ReasonForRejection nvarchar(100)
+);
+go
+create table PurchaseRequestLineItem (
+	Id int not null primary key identity(1, 1),
+	PurchaseRequestId int not null foreign key references PurchaseRequest,
+	ProductId int not null foreign key references Product,
+	Quantity int not null default 1,
+	Active bit not null
 );
 go
 select * from [User];
