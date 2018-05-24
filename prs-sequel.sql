@@ -52,11 +52,6 @@ create table Vendor (
 go 
 create unique index uix_code on Vendor(Code);
 go
-insert Vendor 
-		(Code, Name, Address, City, State, Zip, Phone, Email, IsPreApproved, Active)
-		values
-		('12156', 'name', '7736 scioto court', 'cincinnati', 'OH', '45069', '513-444-4444', 'joebob@gmail.com', 0, 1);
-go
 create table Product (
 	Id int not null identity(1, 1) primary key,
 	VendorId int not null foreign key references Vendor(Id),
@@ -67,11 +62,6 @@ create table Product (
 	PhotoPath nvarchar(255),
 	Active bit not null default 1
 );
-go
-insert Product 
-	(VendorId, PartNumber, Name, Price, Unit, PhotoPath, Active)
-	values
-	('1', '1010101', 'steel beam', 999, 'each', 'path goes here', 1);
 go
 create unique index uix_partnumber on Product(PartNumber);
 go
