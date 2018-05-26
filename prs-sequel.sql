@@ -24,17 +24,17 @@ go
 insert [User]
 	(Username, Password, Firstname, Lastname, Phone, Email, IsReviewer, IsAdmin, Active)
 	Values
-	('fieldsmu', 'password', 'marcus', 'fields', '513-370-8421', 'fieldsmu@gmail.com', 1, 1, 1);
+	('fieldsmu', 'password', 'marcus', 'fields', '513-000-0000', 'johndoe@gmail.com', 1, 1, 1);
 
 insert [User]
 	(Username, Password, Firstname, Lastname, Phone, Email, IsReviewer, IsAdmin, Active)
 	Values
-	('rachelfr', 'password', 'rachel', 'freking', '513-720-9421', 'frekinra@gmail.com', 1, 0, 1);
+	('rachelfr', 'password', 'rachel', 'freking', '513-000-0000', 'janedoe@gmail.com', 1, 0, 1);
 
 insert [User]
 	(Username, Password, Firstname, Lastname, Phone, Email, IsReviewer, IsAdmin, Active)
 	Values
-	('marysadd', 'password', 'mary', 'saddler', '513-254-3769', 'saddlrma@gmail.com', 0, 0, 1);
+	('marysadd', 'password', 'mary', 'saddler', '513-000-0000', 'janedoe@gmail.com', 0, 0, 1);
 go
 create table Vendor (
 	Id int not null identity(1, 1) primary key,
